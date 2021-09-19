@@ -1,6 +1,14 @@
-const theOneFunc = () => {};
+const theOneFunc = (initialDelay) => {
+  const print = (delay) => {
+    console.log(`Hello after ${delay} seconds`);
+  }
 
-setTimeout(theOneFunc, 4 * 1000);
+  print(initialDelay);
+
+  setTimeout(print, 4 * 1000, 8);
+};
+
+setTimeout(theOneFunc, 4 * 1000, 4);
 
 // Hello after 4 seconds
 
